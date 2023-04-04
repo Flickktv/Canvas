@@ -1,7 +1,8 @@
-package com.example.canvas
+package com.example.canvas.customview.ui
 
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
+import com.example.canvas.R
 
 data class CanvasViewState(val color: COLOR, val size: SIZE, val tools: TOOLS)
 
@@ -39,9 +40,9 @@ enum class TOOLS(
     val value: Int
 ) {
 
-//    NORMAL(R.drawable.ic_horizontal_line),
-//    DASH(R.drawable.ic_dashed_line),
-//    SIZE(R.drawable.ic_baseline_brightness_1_24),
-//    PALETTE(R.drawable.ic_baseline_brightness_1_24),
+    NORMAL(R.drawable.baseline_brightness_1_24),
+    DASH(R.drawable.dashed_line),
+//    SIZE(R.drawable.baseline_brightness_1_24),
+    PALETTE(R.drawable.baseline_brightness_1_24),
 
 }

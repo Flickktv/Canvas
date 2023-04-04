@@ -1,10 +1,11 @@
-package com.example.canvas
+package com.example.canvas.tools
 
 import android.content.Context
 import android.util.AttributeSet
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.canvas.*
 import com.hannesdorfmann.adapterdelegates4.ListDelegationAdapter
 
 class ToolsLayout @JvmOverloads constructor(
@@ -15,11 +16,14 @@ class ToolsLayout @JvmOverloads constructor(
 
     private var onClick: (Int) -> Unit = {}
 
-    private val toolsList: RecyclerView = findViewById(R.id.rvTools)
+    private val toolsList: RecyclerView by lazy { findViewById(R.id.rvTools) }
 
     private val adapterDelegate = ListDelegationAdapter(
         colorAdapterDelegate {
-
+            onClick(it)
+        },
+        toolsAdapterDelegate {
+            onClick(it)
         }
     )
 

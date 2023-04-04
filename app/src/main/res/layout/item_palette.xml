@@ -3,5 +3,6 @@
     android:id="@+id/color"
     android:layout_width="24dp"
     android:layout_height="24dp"
+    android:layout_gravity="center_vertical"
     android:src="@drawable/baseline_brightness_1_24"/>
 
